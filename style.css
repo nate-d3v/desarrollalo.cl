@@ -1,0 +1,806 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*
+============================================================
+GENERAL
+============================================================
+*/
+* {
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+html,
+body {
+	width: 100%;
+	height: 100vh;
+	font-size: 10px;
+}
+body,
+header,
+ul,
+section,
+.sites,
+.profiles,
+footer {
+	display: flex;
+}
+body {
+	flex-direction: column;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.6rem;
+	font-weight: 300;
+}
+header {
+	justify-content: space-between;
+	min-height: 10vh;
+	align-items: center;
+	padding: 0 9%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	background-color: #fff;
+	box-shadow: 0 0.4rem 1rem 0 rgba(0, 0, 0, 0.03);
+	width: 100%;
+}
+ul {
+	justify-content: flex-end;
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+a {
+	text-decoration: none;
+}
+#intro {
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100vh;
+	padding: 0 10% 5% 10%;
+	margin-left: 1%;
+	padding-top: 10vh;
+}
+/*
+============================================================
+HEADER
+============================================================
+*/
+#logo {
+	max-width: 25rem;
+}
+nav a.selected,
+nav a:hover,
+.fa-bars:hover {
+	color: #2b4cf2;
+}
+nav > ul > li > a {
+	display: inline-block;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	color: #000000;
+	letter-spacing: 0.05rem;
+	padding: 0 2.5rem;
+}
+#header_btn,
+#submitc {
+	color: #fff;
+	background-color: #2b4cf2;
+	border: 0.1rem #2b4cf2 solid;
+	border-radius: 2.5rem;
+}
+#header_btn:hover,
+#submitc:hover {
+	background-color: #fff;
+	border: 0.1rem #2b4cf2 solid;
+	color: #2b4cf2;
+}
+nav > ul > li:nth-of-type(5) > a {
+	padding-right: 5rem;
+}
+header .fa-bars {
+	color: #000000;
+	font-size: 2.5rem;
+	cursor: pointer;
+	display: none;
+}
+.fa-bars:hover {
+	border: none;
+}
+/*
+============================================================
+HERO SECTION
+============================================================
+*/
+#intro img {
+	max-width: 50%;
+}
+#intro h1,
+#intro span {
+	font-size: 8.5rem;
+	font-weight: 700;
+	letter-spacing: -0.3rem;
+	padding-bottom: 1rem;
+	color: #4245e7;
+}
+#intro p {
+	font-size: 3.2rem;
+	color: #000000;
+	letter-spacing: 0.1rem;
+}
+#intro span {
+	font-weight: 300;
+	color: #000000;
+}
+svg.svg-intro-bottom {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 10rem;
+	z-index: 555;
+}
+/*
+============================================================
+FEATURES SECTION
+============================================================
+*/
+#features {
+	min-height: 100vh;
+	color: #fff;
+	background: linear-gradient(to bottom left, #000000, 85%, #482386, #2b4cf2);
+	flex-direction: column;
+	align-items: center;
+	padding: 10vh;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+#features h2,
+#portfolio h2,
+#team h2,
+#contact h2 {
+	font-size: 4.8rem;
+	font-weight: 700;
+	padding: 4rem 0;
+	line-height: 5.2rem;
+	position: relative;
+}
+#features h2:after,
+#features h3:after,
+#portfolio h2:after,
+#team h2:after,
+#contact h2:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 12%;
+	margin: auto;
+	width: 5rem;
+	height: 0.1rem;
+	background: #fff;
+	opacity: 0.5;
+}
+#features > p,
+#contact > p {
+	text-align: center;
+	font-size: 1.8rem;
+	line-height: 3.2rem;
+	padding-bottom: 8rem;
+	width: 60%;
+}
+#features div {
+	width: 30%;
+}
+#main-features {
+	justify-content: space-between;
+}
+#features h3,
+#portfolio h3 {
+	font-size: 2.4rem;
+	font-weight: 700;
+	padding: 1rem 0 4rem 0;
+	position: relative;
+}
+h3 > span {
+	font-weight: 300;
+}
+#features h3:after {
+	bottom: 22%;
+	right: 100%;
+}
+#main-features p {
+	line-height: 2.6rem;
+	font-size: 1.5rem;
+}
+/*
+============================================================
+PORTFOLIO SECTION
+============================================================
+*/
+#portfolio {
+	color: #000000;
+	flex-direction: column;
+	padding: 10vh;
+	padding-left: 10%;
+	padding-right: 10%;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.sites img {
+	max-width: 100%;
+	border-radius: 3%;
+	align-self: center;
+}
+.sites a {
+	max-width: 45%;
+	display: flex;
+	justify-content: center;
+}
+.sites div {
+	max-width: 40%;
+}
+.sites {
+	padding: 7rem 0;
+	justify-content: space-evenly;
+}
+#portfolio h2:after,
+#team h2:after,
+#contact h2:after {
+	background: #000000;
+}
+#portfolio h3 {
+	font-weight: 400;
+	font-size: 3.6rem;
+}
+.sites p {
+	font-size: 1.8rem;
+	color: #848484;
+	line-height: 2.6rem;
+	padding-bottom: 2rem;
+}
+.sites ul {
+	display: block;
+	padding-top: 1rem;
+}
+.sites li {
+	color: #1d1d1d;
+	font-weight: 300;
+	font-size: 1.8rem;
+	padding: 1rem 0;
+}
+.fa-check {
+	padding-right: 2rem;
+	color: #1d1d1d;
+}
+/*
+============================================================
+TEAM SECTION
+============================================================
+*/
+#team,
+#contact {
+	color: #000000;
+	background-color: #f7f7f7;
+	flex-direction: column;
+	padding: 0 10%;
+	padding-top: 10vh;
+	min-height: 100vh;
+	align-items: center;
+}
+.profiles img {
+	max-width: 15%;
+	border-radius: 50%;
+	align-self: center;
+}
+.profiles {
+	flex-direction: column;
+	align-items: center;
+	padding: 3rem 0;
+}
+.profiles p {
+	width: 80%;
+	font-size: 2rem;
+	line-height: 2.8rem;
+	text-align: justify;
+	color: #1d1d1d;
+}
+.profiles h4,
+.profiles span {
+	font-size: 2rem;
+	font-weight: 700;
+	padding: 0 1rem;
+}
+.profiles > div {
+	display: flex;
+}
+.profiles span {
+	color: #2b4cf2;
+}
+.profiles img + div {
+	flex-direction: column;
+	padding: 4rem 0;
+	align-items: center;
+}
+.profiles p:first-of-type {
+	padding-bottom: 1.5rem;
+}
+/*
+============================================================
+CONTACT SECTION
+============================================================
+*/
+#contact {
+	background-color: #fff;
+}
+.form-grid {
+	display: flex;
+	height: 55vh;
+	min-width: 100%;
+	background-color: #f7f7f7;
+}
+.sub-form-1 {
+	min-width: 40%;
+	background: linear-gradient(to left, #482386, 50%, #000000);
+}
+.sub-form-2 {
+	min-width: 50%;
+	padding: 2rem 6rem 2rem 4rem;
+}
+.svg-form {
+	width: 10%;
+}
+.form-text {
+	padding: 4rem 5rem;
+	color: #fff;
+	max-width: 85%;
+}
+.form-text h3 {
+	font-size: 4rem;
+	line-height: 4.2rem;
+	font-weight: 300;
+	padding: 1rem 0 4rem 0;
+}
+.form-text p {
+	line-height: 2.6rem;
+	font-size: 1.5rem;
+}
+#form-wrapper {
+	display: flex;
+	flex-flow: column wrap;
+}
+.form-sub-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+.form__label {
+	padding-top: 2rem;
+	color: #383838;
+	font-size: 1.8rem;
+}
+.form__input,
+.form__textarea {
+	width: 100%;
+	background: none;
+	border: none;
+	border-bottom: 0.1rem #a8a8a8 solid;
+	padding: 1rem 0;
+}
+.form__input {
+	height: 4rem;
+}
+#submitc {
+	display: inline-block;
+	height: 3.5rem;
+	width: 12rem;
+	line-height: 3.5rem;
+	letter-spacing: 0.05rem;
+	padding: 0 2.5rem;
+	font-size: 1.4rem;
+	font-weight: 400;
+}
+.form-sub-wrapper:last-of-type {
+	padding-top: 6%;
+}
+#contact > p {
+	padding-bottom: 7rem;
+}
+/*
+============================================================
+FOOTER
+============================================================
+*/
+footer {
+	min-height: 20vh;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+.footer-wrapper {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: #000000;
+	color: #fff;
+}
+footer ul {
+	width: 30%;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 10vh;
+}
+footer h5 {
+	line-height: 2.2rem;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
+footer span,
+footer li {
+	line-height: 2.2rem;
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+a:visited {
+	color: inherit;
+}
+footer a:link {
+	font: inherit;
+	color: inherit;
+}
+/*
+============================================================
+MEDIA QUERIES
+============================================================
+*/
+@media all and (max-width: 1200px) {
+	nav {
+		display: none;
+	}
+	header i.fa-bars {
+		display: block;
+		font-size: 3.5rem;
+	}
+	nav.show {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+		width: 100%;
+	}
+	nav.show li {
+		padding: 1rem 0;
+	}
+	nav.show ul {
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	nav > ul > li:nth-of-type(5) > a {
+		padding-right: 2.5rem;
+	}
+	header {
+		height: auto;
+		flex-wrap: wrap;
+		max-width: 100%;
+	}
+	.header-wrapper {
+		display: flex;
+		justify-content: space-between;
+		min-height: 10vh;
+		align-items: center;
+		min-width: 100%;
+	}
+}
+@media all and (max-width: 450px) {
+	html,
+	body {
+		font-size: 5px;
+	}
+	#intro,
+	#features,
+	#portfolio,
+	#team,
+	#contact,
+	#main-features,
+	.sites {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+	}
+	a.anchor {
+		font-size: 2.5rem;
+	}
+	#logo {
+		max-width: 40rem;
+	}
+	#intro {
+		justify-content: space-evenly;
+	}
+	#intro span,
+	#intro h1 {
+		font-size: 12rem;
+	}
+	#intro h1 {
+		padding-bottom: 4rem;
+	}
+	#intro p {
+		font-size: 4.2rem;
+	}
+	#intro img {
+		max-width: 100%;
+	}
+	#features {
+		min-height: auto;
+	}
+	#features h2,
+	#portfolio h2,
+	#team h2,
+	#contact h2 {
+		font-size: 6rem;
+	}
+	#features > p,
+	#contact > p {
+		font-size: 3.2rem;
+		line-height: 4rem;
+		width: 100%;
+		padding-top: 3rem;
+	}
+	#main-features {
+		align-items: center;
+	}
+	#features div {
+		width: 90%;
+		padding-bottom: 7rem;
+	}
+	#features h3,
+	#portfolio h3 {
+		font-size: 4rem;
+	}
+	#main-features p {
+		font-size: 3rem;
+		line-height: 3.6rem;
+	}
+	.sites div,
+	.sites a {
+		max-width: 100%;
+	}
+	.sites div h3 {
+		font-size: 4rem;
+	}
+	.sites div p {
+		font-size: 3rem;
+		line-height: 3.6rem;
+		text-align: justify;
+	}
+	.sites li {
+		font-size: 3rem;
+	}
+	.sites div {
+		padding-bottom: 7rem;
+	}
+	.profiles img {
+		max-width: 45%;
+		padding: 5rem 0;
+	}
+	.profiles p {
+		width: 100%;
+		font-size: 3rem;
+		line-height: 3.8rem;
+	}
+	.profiles p:first-of-type {
+		padding-bottom: 5rem;
+	}
+	.profiles div:last-of-type {
+		padding-top: 3rem;
+		flex-direction: column;
+	}
+	.profiles h4,
+	.profiles span {
+		font-size: 3rem;
+		padding: 1rem 1rem;
+	}
+	#contact {
+		justify-content: space-between;
+	}
+	.svg-form,
+	.svg-intro-bottom {
+		display: none;
+	}
+	.form-grid {
+		flex-direction: column;
+		height: 60vh;
+	}
+	.form-text {
+		max-width: 100%;
+	}
+	.form-text h3 {
+		font-size: 6rem;
+		line-height: 6.2rem;
+	}
+	.form-text p {
+		font-size: 3rem;
+		line-height: 3.6rem;
+	}
+	.form__label {
+		font-size: 2.3rem;
+	}
+	.sub-form-1 {
+		min-height: 40%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.sub-form-2 {
+		margin-top: 2rem;
+	}
+	footer ul {
+		width: 85%;
+	}
+	footer h5 {
+		font-size: 2.5rem;
+	}
+	footer span,
+	footer li {
+		font-size: 2.5rem;
+	}
+}
+@media all and (max-width: 2000px) {
+	html,
+	body {
+		font-size: 12px;
+	}
+}
+@media all and (max-width: 1600px) {
+	html,
+	body {
+		font-size: 10px;
+	}
+}
+@media all and (max-width: 1400px) {
+	html,
+	body {
+		font-size: 9px;
+	}
+}
+@media all and (max-width: 800px) {
+	html,
+	body {
+		font-size: 8px;
+	}
+}
+@media all and (max-width: 450px) {
+	html,
+	body {
+		font-size: 5px;
+	}
+}
+@media all and (max-width: 350px) {
+	html,
+	body {
+		font-size: 4px;
+	}
+}
